@@ -8,11 +8,11 @@ In addition to the data types provided by CsCheck, the following data types can 
 - Host and domain names
 ## Examples
 
-Each generator is created by creating a new instance of the generator class and can be used in the following. An option object can also be passed to each generator, which changes the behavior and results in alternated results. The following examples show generators for creating IPv4 addresses with customized configuration and with default settings.  
+The following examples show generators for creating IPv4 addresses with customized configuration and with default settings.
 
 ### Using default behaviour
 
-By default, all reserved address ranges are ignored.
+Each generator can be used by instantiating it as follows. By default, all reserved address ranges are ignored.
 
 ```csharp
 var ipGen = new GenIPv4Address();
@@ -22,7 +22,7 @@ Console.WriteLine("Generated ip address is {0}", ipAddress);
 
 ### Customize generator behaviour
 
-The generator can also generate IPv4 addresses from the private network ranges.
+Alternatively an option object can be passed to each generator, which changes the behavior and create alternative results. The generator can now also generate IPv4 addresses from private network ranges.
 
 ```csharp
 var options = new IPv4GenOptions();
@@ -46,7 +46,7 @@ var ipAddress = GenBuilder.IPv4
 ```
 ## Configuration
 
-Every generator accepts a option option object that can change the behaviour of generating ranomd values.
+Every generator accepts a option object that can change the behaviour of generating random values.
 
 ### Email
 
