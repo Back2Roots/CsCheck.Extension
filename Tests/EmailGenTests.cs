@@ -1,9 +1,10 @@
-﻿using CsCheck.Extension.Builder.Common;
+﻿using CsCheck;
+using CsCheck.Extension.Builder.Common;
 using CsCheck.Extension.Generators;
 using System.Text.RegularExpressions;
 using Xunit;
 
-namespace CsCheck.Extension.Tests;
+namespace Tests;
 
 public class EmailGenTests()
 {
@@ -51,18 +52,18 @@ public class EmailGenTests()
         gen.Sample(email => GetLocalPart(email).Length <= 64);
     }
 
-[Fact]
-public void LocalPart_Do_Not_Start_Or_End_With_Dot_Sign()
-{
-    GenBuilder.Email
-        .AllowQuotedLocalPart()
-        .Build()
-        .Sample(email =>
-        {
-            var local = GetLocalPart(email);
-            return !local.StartsWith('.') || !local.EndsWith('.');
-        });
-}
+    [Fact]
+    public void LocalPart_Do_Not_Start_Or_End_With_Dot_Sign()
+    {
+        GenBuilder.Email
+            .AllowQuotedLocalPart()
+            .Build()
+            .Sample(email =>
+            {
+                var local = GetLocalPart(email);
+                return !local.StartsWith('.') || !local.EndsWith('.');
+            });
+    }
 
     [Fact]
     public void Unquoted_LocalPart_Consists_Of_Alphanumerical_And_SpecialChars()

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsCheck.Extension", "CsCheck.Extension\CsCheck.Extension.csproj", "{12F5D9A2-FE5B-42B3-B5BA-42A192FD10AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsCheck.Extension.Tests", "CsCheck.Extension.Tests\CsCheck.Extension.Tests.csproj", "{29666AC4-F212-4973-A1B8-5D73322A8A7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{29666AC4-F212-4973-A1B8-5D73322A8A7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{DBF38989-BF05-430D-B3DF-1604C8C45EC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{DBF38989-BF05-430D-B3DF-1604C8C45EC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
